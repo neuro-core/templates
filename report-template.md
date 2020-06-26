@@ -17,7 +17,7 @@ pdf_options:
 ---
 
 <a href="https://neuro-core.ru" style="position: absolute; z-index: 1000; right: 0; top: 12px;">
-    <img style=" width: 70px; height: 70px;" src="https://raw.githubusercontent.com/neuro-core/templates/master/logo.png" alt="NeuroCore">
+    <img style=" width: 70px; height: 70px;" src="https://raw.githubusercontent.com/neuro-core/templates/master/logo/neuro-core-logo-mini.png" alt="NeuroCore">
 </a>
             
 # Отчёт по проекту [PROJECT] <br>25.06.20
