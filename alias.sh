@@ -8,6 +8,30 @@ neuro_core_init (){
     readmeUrl="$githubUrl""$readmeFileName"
     reportUrl="$githubUrl""$reportFileName"
 
+    logo (){
+        echo "Downloading logo"
+        logoGithubPath="logo/neuro-core-logo"
+        logoFileName=".png"
+
+        if [[ -z "$1" ]]; then
+            echo "Downloading default png logo"
+        else
+            case "$1" in
+                mini)
+                    echo "Downloading mini png logo"
+                    logoFileName="-mini.png"
+                    ;;
+                gif)
+                    echo "Downloading gif logo"
+                    logoFileName=".gif"
+                    ;;
+                *)
+            esac
+        fi
+
+        wget "$githubUrl""$logoGithubPath""$logoFileName"
+    }
+
     readme (){
         echo "Creating readme template"
         wget -O ${1} ${readmeUrl}
@@ -49,6 +73,12 @@ neuro_core_init (){
                 ;;
             report)
                 report ${reportFileName}
+                ;;
+            l)
+                logo ${2}
+                ;;
+            logo)
+                logo ${2}
                 ;;
             *)
                 echo "Unknown task"
